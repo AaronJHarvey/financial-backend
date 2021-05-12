@@ -1,4 +1,4 @@
-class Api::v1::TransactionsController < ApplicationController
+class Api::V1::TransactionsController < ApplicationController
   before_action :set_account
 
   def index
