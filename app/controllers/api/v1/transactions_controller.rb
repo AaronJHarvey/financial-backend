@@ -10,7 +10,7 @@ class Api::V1::TransactionsController < ApplicationController
     @transaction = @account.transactions.new(transaction_params)
     if @account.update_balance(@transaction) != "Insufficient Funds"
       @transaction.save
-      render json: @transaction
+      render json: @account
     else
       render json: {error: "Insufficient Funds"}
     end
